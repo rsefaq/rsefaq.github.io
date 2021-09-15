@@ -5,7 +5,8 @@ function fnLoad(sl_img) {
   document.body.appendChild(eDiv);
   eDiv.innerHTML = `<canvas id='cvs_down' style='display:none;'></canvas>
 <a id='a_down' style='display:none;'></a>
-▲ Get Img Tags<br>var sl_img='';document.querySelectorAll('#view_content img').forEach(e=>sl_img+='&lt;img src="'+e.src+'"&gt;\\n');console.log(sl_img);<br/><br/>
+▲ Get Img Tags<br>var sl_img='';document.querySelectorAll('#view_content img').forEach(e=>sl_img+='&lt;img src="'+e.src+'"&gt;\\n');console.log(sl_img);<br/>
+ <input type="checkbox" id="ckxCOA" value="crossorigin = anonymous"><br/><br/>
 <textarea id='img_tags' rows=5 style='width:99%;'></textarea><br/><br/>
 <button id='btnDrawImage'>Draw Image</button>&nbsp; &nbsp; 
 <button id='btnClear'>Clear</button>&nbsp; &nbsp; 
@@ -23,7 +24,8 @@ function fnLoad(sl_img) {
     for (e_target of el_target) {
       var s_idx = (i_down++).toString().padStart(3, '0');
       e_target.setAttribute('id', 'IMG' + s_idx);
-      e_target.setAttribute('crossorigin', 'anonymous');
+      if (vehicle1.checked)
+        e_target.setAttribute('crossorigin', 'anonymous');
       e_target.setAttribute('data-index', s_idx)
     }
   }
