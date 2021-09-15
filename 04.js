@@ -6,7 +6,7 @@ function fnLoad(sl_img) {
   eDiv.innerHTML = `<canvas id='cvs_down' style='display:none;'></canvas>
 <a id='a_down' style='display:none;'></a>
 ▲ Get Img Tags<br>var sl_img='';document.querySelectorAll('#view_content img').forEach(e=>sl_img+='&lt;img src="'+e.src+'"&gt;\\n');console.log(sl_img);<br/>
- <input type="checkbox" id="ckxCOA" value="crossorigin = anonymous"><br/><br/>
+ <input type="checkbox" id="ckxCOA"><label for="ckxCOA"> crossorigin = anonymous</label><br/><br/>
 <textarea id='img_tags' rows=5 style='width:99%;'></textarea><br/><br/>
 <button id='btnDrawImage'>Draw Image</button>&nbsp; &nbsp; 
 <button id='btnClear'>Clear</button>&nbsp; &nbsp; 
