@@ -24,7 +24,7 @@ function fnLoad(sl_img) {
     for (e_target of el_target) {
       var s_idx = (i_down++).toString().padStart(3, '0');
       e_target.setAttribute('id', 'IMG' + s_idx);
-      if (vehicle1.checked)
+      if (ckxCOA.checked)
         e_target.setAttribute('crossorigin', 'anonymous');
       e_target.setAttribute('data-index', s_idx)
     }
