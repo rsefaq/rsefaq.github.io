@@ -75,6 +75,6 @@ function fnLoad(sl_img) {
   btnClear.onclick = () => img_dsp.innerHTML = '';
   btnDownload.onclick = (e) => fnDownload(0);
   btnDownloadDirect.onclick = (e) => fnDownloadDirect(0);
-  btnGetFileRenameCmd.onclick = (e) => fnGetFileRenameCmd;
+  btnGetFileRenameCmd.onclick = fnGetFileRenameCmd;
   img_tags.value = sl_img;
 }
