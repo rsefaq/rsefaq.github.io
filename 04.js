@@ -7,11 +7,10 @@ function fnLoad(sl_img) {
 <a id='a_down' style='display:none;'></a>
 ▲ Get Img Tags<br>var sl_img=''; if (window.getSelection().rangeCount > 0) {var el = window.getSelection().getRangeAt(0).startContainer.parentElement.querySelectorAll('img');} else {var el = document.querySelectorAll('#view_content' + ' img');} el.forEach(e=>sl_img+='&lt;img src="'+e.src+'"&gt;\n');console.log(sl_img);<br/><br/>
 <textarea id='img_tags' rows=5 style='width:99%;'></textarea><br/><br/>
-<button id='btnDrawImage'>Draw Image</button>&nbsp; &nbsp; 
-<input type="checkbox" id="ckxCOA"><label for="ckxCOA"> crossorigin = anonymous</label>&nbsp; &nbsp; 
-<button id='btnClear'>Clear</button>&nbsp; &nbsp; 
-<button id='btnDownload'>Download</button>&nbsp; &nbsp; 
-<button id='btnDownloadDirect'>Download Direct</button><br/>
+<button id='btnDrawImage'>Draw Image</button>&emsp;<input type="checkbox" id="ckxCOA"><label for="ckxCOA"> crossorigin = anonymous</label>&emsp;
+<button id='btnClear'>Clear</button>&emsp;<button id='btnDownload'>Download</button>&emsp;<button id='btnDownloadDirect'>Download Direct</button>&emsp;
+<button id='btnGetFileRenameCmd'>Rename Cmd</button>
+<br/>
 <div id='img_dsp'></div>`;
   
   var ctx_down = cvs_down.getContext('2d');
@@ -63,6 +62,13 @@ function fnLoad(sl_img) {
       a_down.click();
       setTimeout(function(){fnDownloadDirect(i_down);}, 250);
     }
+  }
+  
+  function btnGetFileRenameCmd() {
+    var sTmp = '';
+    var el = document.querySelectorAll("img");
+    el.forEach(e=>sTmp+= 'rename '+ e.src.split(/(\\|\/)/g).pop()+' '+e.getAttribute('data-index') + '.png\n');
+    img_tags.value = sTmp;
   }
   
   btnDrawImage.onclick = fnDrawImage;
