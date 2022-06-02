@@ -64,7 +64,7 @@ function fnLoad(sl_img) {
     }
   }
   
-  function btnGetFileRenameCmd() {
+  function fnGetFileRenameCmd() {
     var sTmp = '';
     var el = document.querySelectorAll("img");
     el.forEach(e=>sTmp+= 'rename '+ e.src.split(/(\\|\/)/g).pop()+' '+e.getAttribute('data-index') + '.png\n');
@@ -75,5 +75,6 @@ function fnLoad(sl_img) {
   btnClear.onclick = () => img_dsp.innerHTML = '';
   btnDownload.onclick = (e) => fnDownload(0);
   btnDownloadDirect.onclick = (e) => fnDownloadDirect(0);
+  btnGetFileRenameCmd.onclick = (e) => fnGetFileRenameCmd;
   img_tags.value = sl_img;
 }
