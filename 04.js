@@ -1,6 +1,6 @@
 function fnLoad(sl_img) {
   document.head.outerHTML='';
-  var eDiv = document.createElement('eDiv');
+  var eDiv = document.createElement('div');
   eDiv.id = 'main';
   document.body.appendChild(eDiv);
   eDiv.innerHTML = `<canvas id='cvs_down' style='display:none;'></canvas>
@@ -12,7 +12,6 @@ function fnLoad(sl_img) {
 <button id='btnGetFileRenameCmd'>Rename Cmd</button>
 <br/>
 <div id='img_dsp'></div>`;
-  
   var ctx_down = cvs_down.getContext('2d');
   var i_down = 1;
 
