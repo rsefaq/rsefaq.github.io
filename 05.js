@@ -12,12 +12,12 @@ function fnLoad() {
       var eBr = document.createElement('br');
       document.body.appendChild(eBr);
       var eImg = document.createElement('img');
-      eImg.src = 'https://www.airkorea.or.kr/web/placeInfo/getImgFile?scrinId=16600&amp;Dx=D0&amp;imageSn=3';
+      eImg.src = 'https://www.airkorea.or.kr/web/placeInfo/getImgFile?scrinId=16600&Dx=D0&imageSn=3';
       eImg.style = 'width: 492px; padding-top: 12px;';
       eImg.alt = "초미세먼지 공간분포 이미지";
       document.body.appendChild(eImg);
       var eImg = document.createElement('img');
-      eImg.src = 'https://www.airkorea.or.kr/web/placeInfo/getImgFile?scrinId=16600&amp;Dx=D0&amp;imageSn=1';
+      eImg.src = 'https://www.airkorea.or.kr/web/placeInfo/getImgFile?scrinId=16600&Dx=D0&imageSn=1';
       eImg.style = 'width: 492px; padding-top: 12px;';
       eImg.alt = "미세먼지 공간분포 이미지";
       document.body.appendChild(eImg);
