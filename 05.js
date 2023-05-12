@@ -15,13 +15,15 @@ function fnLoad() {
       eImg.src = 'https://www.airkorea.or.kr/web/placeInfo/getImgFile?scrinId=16600&Dx=D0&imageSn=3';
       eImg.style = 'width: 492px; padding-top: 12px;';
       eImg.alt = "초미세먼지 공간분포 이미지";
+      eImg.onload = function() {
+        var eImgSub = document.createElement('img');
+        eImgSub.src = 'https://www.airkorea.or.kr/web/placeInfo/getImgFile?scrinId=16600&Dx=D0&imageSn=1';
+        eImgSub.style = 'width: 492px; padding-top: 12px;';
+        eImgSub.alt = "미세먼지 공간분포 이미지";
+        document.body.appendChild(eImgSub);
+      };
       document.body.appendChild(eImg);
-      var eImg = document.createElement('img');
-      eImg.src = 'https://www.airkorea.or.kr/web/placeInfo/getImgFile?scrinId=16600&Dx=D0&imageSn=1';
-      eImg.style = 'width: 492px; padding-top: 12px;';
-      eImg.alt = "미세먼지 공간분포 이미지";
-      document.body.appendChild(eImg);
-    }
+    };
     document.body.appendChild(eFrmSub);
   };
   document.body.appendChild(eFrm);
