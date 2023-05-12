@@ -9,6 +9,8 @@ function fnLoad() {
     eFrmSub.src = 'https://www.airkorea.or.kr/web/vicinityStation?item_code=10007&station_code=336112';
     eFrmSub.style = 'width: 570px;height: 422px;';
     eFrmSub.onload = function() {
+      var eBr = document.createElement('br');
+      document.body.appendChild(eBr);
       var eImg = document.createElement('img');
       eImg.src = 'https://www.airkorea.or.kr/web/placeInfo/getImgFile?scrinId=16600&amp;Dx=D0&amp;imageSn=3';
       eImg.style = 'width: 492px; padding-top: 12px;';
