@@ -324,8 +324,8 @@
           canvas.width = w * canvasScale;
           canvas.height = h * canvasScale;
           toolbar.style.minWidth = canvas.width + 'px';
-          tmpCanvas.width = w * canvasScale;
-          tmpCanvas.height = h * canvasScale;
+          tmpCanvas.width = w;
+          tmpCanvas.height = h;
           tmpCanvas.style.width = tmpCanvas.width + 'px';
           tmpCanvas.style.height = tmpCanvas.height + 'px';
           tmpCanvas.getContext('2d', { willReadFrequently: true }).setTransform(1, 0, 0, 1, 0, 0);
