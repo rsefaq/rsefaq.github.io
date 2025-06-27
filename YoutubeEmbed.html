@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<body>
+<script>
+  let query = window.location.search;
+  let param = new URLSearchParams(query);
+  if (param.has('v'))window.location.href='https://www.youtube.com/embed/'+param.get("v');
+</script>
+</body>
+</html>
